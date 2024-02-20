@@ -3,210 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mdzukulu</title>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="fontawesome/css/all.min.css">
-<link rel="stylesheet" href="css/magnific-popup.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="slick/slick.min.css">
-<link rel="stylesheet" href="slick/slick-theme.css">
-<link rel="stylesheet" href="css/templatemo-upright.css">
+<title>Mdzukulu Television</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
-body {
-    margin: 10;
-    padding: 0;
-    text-align: center; /* Center align all content */
-}
-.container-fluid {
-    margin: 10 auto; /* Center the container horizontally */
-    max-width: 1200px; /* Optional: Set maximum width for the container */
-}
-.tm-section-wrap {
-    padding: 50px 0;
-    text-align: left; /* Reset text alignment for specific sections */
-}
-.tm-section {
-    padding: 0 20px;
-}
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #343a40;
+        color: #fff;
+        padding: 0% 0;
+        text-align: center;
+        z-index: 999; /* Ensure header is on top */
+    }
+    .container {
+        max-width: 600px;
+        padding: 0px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 80px; /* Adjust based on header height */
+    }
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .logo {
+        width: 50%;
+        max-width: 200px;
+        margin-bottom: 6px;
+    }
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2px;
+        margin-top: 5px; /* Adjust top margin to make space for the header */
+    }
+    .button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2px;
+        border-radius: 10px;
+        background-color: #007bff; /* Default background color */
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+        z-index: 1; /* Ensure buttons are below the iframe */
+        position: relative;
+    }
+    .button:hover {
+        background-color: #7fb6f1;
+    }
+    .button i {
+        font-size: 24px;
+        margin-bottom: 0%; /* Reduce margin */
+    }
+    .button-tv {
+        background-color: orange; /* TV button background color */
+    }
+    .button-youtube {
+        background-color: red; /* YouTube button background color */
+    }
+    .footer {
+        background-color: #343a40;
+        color: #fff;
+        padding: 0% 0;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 999; /* Ensure footer is on top */
+    }
+    /* New styles for the live TV button */
+    #liveTvButton {
+        display: inline-block;
+        padding: 0% 20px;
+        background-color: green; /* Change to your preferred color */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        z-index: 1; /* Ensure button is below the iframe */
+        position: relative;
+    }
+    #liveTvButton:hover {
+        background-color: darkgreen; /* Darken on hover */
+    }
+
+    .home-button {
+        position: fixed;
+        top: 630px;
+        left: 153px;
+        z-index: 9999;
+        color: #2c2b2b;
+        text-decoration: none;
+        font-size: 40px;
+    }
 </style>
 </head>
-<body style="background-color: #999797;">
-<div class="container-fluid">
-<div class="row">
-<div id="tm-sidebar" class="tm-sidebar">
-<nav class="tm-nav">
-<button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-<i class="fas fa-bars"></i>
-</button>
-<div>
-<div class="tm-brand-box">
-<h1 class="tm-brand">Mdzukulu Online<br>Television</h1>
+<body>
+<div class="header">
+    <h1>Mdzukulu Television</h1>
 </div>
-<ul id="tm-main-nav">
-
-<li class="nav-item">
-<a href="#gallery" class="nav-link">
-<div class="triangle-right"></div>
-<i class="fas fa-images nav-icon"></i>
-TV
-</a>
-</li>
-<li class="nav-item">
-<a href="#about" class="nav-link">
-<div class="triangle-right"></div>
-<i class="fas fa-user-friends nav-icon"></i>
-Our Team
-</a>
-</li>
-</ul>
-</div>
-<footer class="mb-3 tm-mt-100">
-Design: <a href="#" target="_parent" rel="sponsored">Shepherd Zisper Phiri</a>
-</footer>
-</nav>
-</div>
-</section>
-</div>
-<div class="tm-section-wrap">
-    <section id="gallery" class="tm-section fixed-section">
-        <div class="text-center">
-            <h2 class="tm-text-primary">Mdzukulu<img src="img/logo.png" width="60" height="60" alt="Logo" style="font-size: 5;"></h2>
-        </div>
-    </section>
-    
-<hr class="mb-5">
-<ul class="tm-gallery-links">
-<li>
-<a href="javascript:void(0);" class="tm-gallery-link" data-filter="dear-ex">
-<i class="fas fa-portrait tm-gallery-link-icon"></i>
-LIVE TV
-</a>
-</li>
-<li>
-<a href="javascript:void(0);" class="tm-gallery-link" data-filter="stage">
-<i class="far fa-building tm-gallery-link-icon"></i>
-VIDEOS
-</a>
-</li>
-</ul>
-<div class="tm-gallery">
-<figure class="effect-honey tm-gallery-item dear-ex">
-<div class="video-wrapper">
-<iframe src="https://embed.vindral.com/?core.url=https://lb.cdn.vindral.com&core.channelId=pansasa_pansasa_ci_bcffcdbe-da83-4806-a204-0b745587a755" frameborder="0" allowfullscreen></iframe>
-<p>Live Feed</p>
-</div>
-</figure>
-<figure class="effect-honey tm-gallery-item stage">
-<div class="video-wrapper">
-<iframe src="https://www.youtube.com/embed/yu5B5pgM1bw" frameborder="0" allowfullscreen></iframe>
-<div class="video-description">
-    <p>Sowing Seeds</p>
-    <p>Add your video description text here. You can include details about the video, its content, and any other relevant information.</p>
-</div>
-
-</div>
-</figure>
-
-</div>
-</section>
-</div>
-<div class="tm-section-wrap">
-<section id="about" class="tm-section">
-<h2 class="tm-text-primary">Our Team </h2>
-<hr class="mb-5">
-<div class="mt-5">
-<div class="tm-carousel">
-<div class="tm-carousel-item">
-<figure class="effect-honey mb-4">
-<img src="img/about-01.jpg" alt="Featured Item">
-</figure>
-<div class="tm-about-text">
-<h3 class="mb-3 tm-text-primary tm-about-title">Shepherd Zisper Phiri | Founder </h3>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="tm-section-wrap tm-copyright row justify-content-center">
-    <div class="col-12">
-        <div class="text-center">
-            Email: mdzukulutelevision@gmail.com | +27602329014<br>
-            Copyright 2020 mdzukulu Online Television 
-        </div>
+<div class="container">
+    <a href="#">
+        <img src="logo.png" alt="App Logo" class="logo">
+    </a>
+    <div class="button-grid">
+        <a href="live.html" class="button button-tv">
+            <i class="fas fa-tv"></i>
+            Live TV
+        </a>
+        <a href="#" class="button">
+            <i class="fas fa-broadcast-tower"></i> <!-- Corrected icon class -->
+            Radio
+        </a>
+        <a href="#" class="button">
+            <i class="fas fa-newspaper"></i>
+            News
+        </a>
+        <a href="youtube.html" class="button button-youtube">
+            <i class="fab fa-youtube"></i>
+            YouTube
+        </a>
     </div>
 </div>
-
+<a href="index.html" class="home-button"><i class="fas fa-home"></i></a>
+<div class="footer">
+    <p>&copy; 2024 Mdzukulu Tv<br>Developed by Shepherd Zisper Phiri.</p>
 </div>
-</div>
-</div>
-<style>.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (1280 / 720) */
-    overflow: hidden;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 10;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-</style>
-<style>
-    .effect-honey .video-description-container {
-    display: flex;
-    align-items: center;
-}
-
-.effect-honey .video-wrapper {
-    flex: 0 0 60%; /* Adjust the width as needed */
-    margin-right: 20px; /* Add spacing between the video and description */
-}
-
-.effect-honey .video-description {
-    flex: 0 0 40%; /* Adjust the width as needed */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .effect-honey .video-description-container {
-        flex-direction: column;
-    }
-
-    .effect-honey .video-wrapper,
-    .effect-honey .video-description {
-        flex: 1 1 100%; /* Make them full width on smaller screens */
-        margin-right: 0; /* Remove spacing */
-    }
-}
-
-</style>
-<Style>.fixed-section {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 0px; /* Adjust padding as needed */
-    background-color: rgba(255, 255, 255, 0); /* Set background color with transparency */
-    border-bottom: -1px solid #333; /* Add a thinner bottom border */
-    z-index: 0;
-}
-
-.fixed-section h2 {
-    margin: 0; /* Remove default margin for the heading */
-}
-
-</Style>
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/jquery.singlePageNav.min.js"></script>
-<script src="js/parallax/parallax.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="slick/slick.min.js"></script>
-<script src="js/templatemo-script.js"></script>
 </body>
 </html>
