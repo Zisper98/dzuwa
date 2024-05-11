@@ -116,21 +116,88 @@
 </style>
 </head>
 <body>
+
 <div class="header">
     <h1>Mvangeli Online</h1>
 </div>
+
 <div class="container">
     <a href="#">
         <img src="logo.png" alt="App Logo" class="logo">
     </a>
+
+    <title>Custom HTML Player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Custom player styles */
+    .custom-player {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .custom-player i {
+      font-size: 24px;
+      color: #007bff;
+      margin-right: 10px;
+    }
+    .custom-player .player-text {
+      font-size: 16px;
+      color: #333;
+    }
+    .play-btn {
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .play-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="custom-player">
+  <i class="fas fa-broadcast-tower"></i>
+  <span class="player-text">MVANGELI FM>></span>
+  <button class="play-btn" id="playPauseBtn">Play</button>
+</div>
+
+<script>
+  const streamUrl = "https://stream-176.zeno.fm/qgc5acik2fyuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJxZ2M1YWNpazJmeXV2IiwiaG9zdCI6InN0cmVhbS0xNzYuemVuby5mbSIsImp0aSI6Il91Y2pLZ3FKUWt1dDZYc29Ma1F4NlEiLCJpYXQiOjE3MTUzNzk5MjksImV4cCI6MTcxNTM3OTk4OX0.R_JpWkWsV4dFmwnPOttzlyIwkSBIKWSnvfw4oZODSqg&zttl=5";
+  const audio = new Audio(streamUrl);
+  
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  let isPlaying = false;
+
+  playPauseBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      playPauseBtn.textContent = 'Play';
+    } else {
+      audio.play();
+      playPauseBtn.textContent = 'Pause';
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
+
     <div class="button-grid">
         <a href="live.html" class="button button-tv">
             <i class="fas fa-tv"></i>
             Mvangeli Live TV
         </a>
-        <a href="https://stream-176.zeno.fm/qgc5acik2fyuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJxZ2M1YWNpazJmeXV2IiwiaG9zdCI6InN0cmVhbS0xNzYuemVuby5mbSIsImp0aSI6Il91Y2pLZ3FKUWt1dDZYc29Ma1F4NlEiLCJpYXQiOjE3MTUzNzk5MjksImV4cCI6MTcxNTM3OTk4OX0.R_JpWkWsV4dFmwnPOttzlyIwkSBIKWSnvfw4oZODSqg&zttl=5" class="button">
+        <a href="https://nyasaflix.onrender.com/" class="button">
             <i class="fas fa-broadcast-tower"></i> <!-- Corrected icon class -->
-            Mvangeli Radio
+            Malawi Radios
         </a>
         <a href="#" class="button">
             <i class="fas fa-newspaper"></i>
@@ -140,7 +207,11 @@
             <i class="fab fa-youtube"></i>
             Videos
         </a>
+        
+        
     </div>
+    
+  
 </div>
 <a href="index.html" class="home-button"><i class="fas fa-home"></i></a>
 <div class="footer">
